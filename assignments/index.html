@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="radio" id="tab1" name="tab" checked>
+        <input type="radio" id="tab2" name="tab">
+        <input type="radio" id="tab3" name="tab">
+        <ul class="tabs">
+            <li><label for="tab1" id="tab-label1">Tab 1</label></li>
+            <li><label for="tab2" id="tab-label2">Tab 2</label></li>
+            <li><label for="tab3" id="tab-label3">Tab 3</label></li>
+        </ul>
+        <div class="content">
+            <div class="tab-content" id="content1">
+                <p>This content is for Tab 1</p>
+            </div>
+            <div class="tab-content" id="content2">
+                <p>This content is for Tab 2</p>
+            </div>
+            <div class="tab-content" id="content3">
+                <p>This content is for Tab 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

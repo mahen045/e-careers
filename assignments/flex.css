@@ -1,0 +1,30 @@
+.flex-container{
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+    border: 4px solid lightskyblue;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 400px){
+    .flex-container{
+        flex-direction: column;
+    }
+}
+
+/* .flex-container > div {
+    background-color: burlywood;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+} */

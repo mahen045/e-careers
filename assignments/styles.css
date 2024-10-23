@@ -1,0 +1,60 @@
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+input[type="radio"] {
+    display: none;
+}
+
+.tabs{
+    list-style-type: none;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs li{
+    margin-right: 15px;
+}
+
+#tab1:checked ~ .tabs #tab-label1,
+#tab2:checked ~ .tabs #tab-label2,
+#tab3:checked ~ .tabs #tab-label3 {
+    background-color: blue;
+    color: white;
+}
+*{
+    box-sizing: border-box;
+}
+
+.content {
+    width: 90%;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-top: 80px;
+    text-align: center;
+    background-color: brown;
+}
+
+.tab-content {
+    display: none;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#tab1:checked ~ .content #content1,
+#tab2:checked ~ .content #content2,
+#tab3:checked ~ .content #content3{
+    display:block;
+
+}
+
+img{
+    position: absolute;
+    
+}
+
+

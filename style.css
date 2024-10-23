@@ -1,0 +1,28 @@
+a{
+   color:#9900ff;
+}
+form{
+    background-color: aquamarine;
+}
+
+ul,ol{
+    list-style-position: inside;
+   
+}
+table{
+    border-collapse: collapse;
+}
+#para1{
+    text-align: justify;
+}
+#p1{
+    direction: rtl;
+    text-shadow: 2px 2px 3px red;
+}
+.cap{
+    text-transform: capitalize;
+}
+
+p.cap{
+    text-decoration: underline;
+}

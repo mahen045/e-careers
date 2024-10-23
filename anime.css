@@ -1,0 +1,30 @@
+.content{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    background-color: aqua;
+    animation-name: demo;
+    animation-duration: 5s;
+}
+
+@keyframes demo{
+   0% {background-color: aqua; left:0px; top:0px}
+   25% {background-color: rgba(161, 180, 238, 0.703); left:250px; top:0px}
+   50% {background-color: rgba(128, 45, 236, 0.703); left:250px; top:250px}
+   75% {background-color: rgba(199, 36, 236, 0.703); left:0px; top:250px}
+   100% {background-color: aqua; left:0px; top:0px}
+}
+@keyframes demo1{
+    0% {left:0px; top:0px}
+    25% { left:250px; top:0px}
+    50% { left:250px; top:250px}
+    75% { left:0px; top:250px}
+    100% { left:0px; top:0px}
+ }
+
+p{
+    animation-name: demo1;
+    position : relative;
+    animation-duration: 5s;
+}
+

@@ -1,0 +1,49 @@
+h3{
+    text-align: center;
+    color:blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+
+/* this will select all p tags within div tag  */
+/* div p{
+    background-color: aquamarine;
+} */
+
+/* this will select all p tags whose parent is div*/
+div > p{
+    text-transform: uppercase;
+}
+
+/* this will be applied to first p tag that falls immediately after div */
+div+p{
+    color:brown
+}
+
+a:active{
+    background-color: brown;
+}
+
+p:first-child{
+    font-variant:small-caps;
+}
+
+#p1{
+    background-image: url('./images/bird1.jpg');
+    /* background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-repeat: space;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: round; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#div1{
+    height: 100px;
+    width: 200px;
+    background-color: cadetblue;
+    border: 4px solid red
+}
+ 
