@@ -29,5 +29,23 @@ def post_data():
     cur.close()
     return jsonify({'message':'Data inserted successfully'})
 
+@app.route('/data/<int:id>', methods=['GET'])
+def get_data_by_id(id):
+    cur = mysql.connection.cursor()
+    cur.execute('''SELECT * from employee where emp_id = %s''', (id,))
+    data = cur.fetchall()
+    cur.close()
+    return jsonify(data)
+
+@app.route('/data/<int:id>', methods=['PUT'])
+def update_data_by_id(id):
+    cur = mysql.connection.cursor()
+    name = request.json['emp_name']
+    dept = request.json['emp_dept']
+    cur.execute('''UPDATE employee SET emp_name = %s, emp_dept = %s WHERE emp_id = %s''', (name, dept, id))
+    mysql.connection.commit()
+    cur.close()
+    return jsonify({'message':'Data updated successfully'})
+
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5002)
