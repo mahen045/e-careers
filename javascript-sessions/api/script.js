@@ -5,19 +5,19 @@
 //let users = []
 document.getElementById('blogForm').addEventListener('submit', (e)=>{
     e.preventDefault();
-    const url = 'https://jsonplaceholder.typicode.com/users'
+    const url = 'http://localhost:5002/data'
     fetch(url)
     .then(response => response.json())
      .then(data => {
          if(data.length > 0){
             const newTable = document.createElement("table")
-            newTable.innerHTML = "<thead><th>User Name</th><th>Email</th></thead>"
+            newTable.innerHTML = "<thead><th>User Name</th><th>Dept</th></thead>"
              data.forEach((user) =>{
                 const newRow = document.createElement("tr")
                 const tdName = document.createElement("td")
                 const tdEmail = document.createElement("td")
-                tdName.textContent = user.name
-                tdEmail.textContent = user.email
+                tdName.textContent = user.emp_name
+                tdEmail.textContent = user.emp_dept
                 newRow.appendChild(tdName)
                 newRow.appendChild(tdEmail)
                 newTable.appendChild(newRow)

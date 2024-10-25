@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
+from flask_cors import cross_origin
 import mysql.connector
 app = Flask(__name__)
 # Database connection configuration
@@ -13,6 +14,7 @@ def create_connection():
     return connection    
 #mysql = MySQL(app)
 @app.route('/data', methods=['GET'])
+@cross_origin(origins='*')
 def get_data():
     connection = create_connection()
     cur = connection.cursor(dictionary=True)
