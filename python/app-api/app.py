@@ -1,17 +1,21 @@
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
-
+import mysql.connector
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'pass123'
-app.config['MYSQL_DB'] = 'e_careers'
-
-mysql = MySQL(app)
-
+# Database connection configuration
+def create_connection():
+    connection = mysql.connector.connect(
+        host = 'localhost',
+        user = 'root',
+        password = 'pass123',
+        database = 'e_careers'
+    )
+    return connection    
+#mysql = MySQL(app)
 @app.route('/data', methods=['GET'])
 def get_data():
-    cur = mysql.connection.cursor()
+    connection = create_connection()
+    cur = connection.cursor(dictionary=True)
     cur.execute('''SELECT * from employee''')
     data = cur.fetchall()
     cur.close()
