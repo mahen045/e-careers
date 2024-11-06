@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET']) #Decorators
 def renderLogin():
     return render_template('index.html')
-#creating routes
+# creating routes
 @app.route('/login', methods=['POST'])
 def login():
     if request.method == 'POST':
